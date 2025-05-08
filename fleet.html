@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>South West Buses Fleet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lexend', sans-serif;
+            background: #f4f6f8;
+        }
+        header {
+            background: #084d7e;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        main {
+            flex: 1;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        table.dataTable {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .dataTables_wrapper .dataTables_filter {
+            float: right;
+            margin-bottom: 10px;
+        }
+        .dataTables_wrapper .dataTables_paginate {
+            text-align: center;
+            padding-top: 10px;
+        }
+        .livery {
+            width: 40px;
+            height: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid #e0e0e0;
+            border-right: 1px solid #ddd;
+        }
+        thead th {
+            background-color: #e9ecef;
+            border-bottom: 2px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        tr td:last-child, tr th:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>South West Buses Fleet List</h1>
+</header>
+
+<main>
+    <table id="fleetTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Fleet Number</th>
+                <th>Reg</th>
+                <th>Type</th>
+                <th>Livery</th>
+                <th>Branding</th>
+                <th>Special Features</th>
+                <th>Name</th>
+                <th>Depot</th>
+                <th>Operator</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+    <tr>
+        <td>50</td>
+        <td>MB84 VAR</td>
+        <td>Mercedes-Benz Vario</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 72%, rgba(8, 77, 126, 1) 72%)"></div> SWB | Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>51</td>
+        <td>S100 SWB</td>
+        <td>Optare Metrorider</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 72%, rgba(8, 77, 126, 1) 72%)"></div> SWB | Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>52</td>
+        <td>S300 SWB</td>
+        <td>Optare Metrorider</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(176, 45, 46, 1) 49%, rgba(196, 186, 156, 1) 50%)"></div> SWB | Ashire Traction</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>99</td>
+        <td>BF67 WFY</td>
+        <td>Mercedes-Benz Sprinter Mellor Strata</td>
+        <td><div class="livery" style="background: #527cae"></div> SWB | Original Blue</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>101</td>
+        <td>YY24 HAA</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 70% 50%, rgba(255, 185, 0, 1) 35%, rgba(255, 197, 42, 1) 35%, rgba(255, 197, 42, 1) 35%)"></div> SWB | The Seventies</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>102</td>
+        <td>YY16 YJL</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>103</td>
+        <td>YY16 YJM</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(255, 168, 22, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(255, 168, 22, 1) 77%)"></div> SWB | Halloween 2023</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>104</td>
+        <td>YY16 YJS</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A</td>
+        <td>Sunset</td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>105</td>
+        <td>BK10 MFP</td>
+        <td>Volvo B7RLE Wright Eclipse 2</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td>Seat Belt</td>
+        <td>Eclipse_BK10MFP</td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>106</td>
+        <td>YJ09 FWF</td>
+        <td>Volvo B7RLE Wright Eclipse Urban</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(225, 168, 46, 1) 21%, rgba(236, 193, 101, 1) 21%, rgba(236, 193, 101, 1) 50%, rgba(236, 193, 101, 1) 79%, rgba(225, 168, 46, 1) 79%)"></div> SWB | Your FiftyFour [Old]</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>107</td>
+        <td>YJ09 FWD</td>
+        <td>Volvo B7RLE Wright Eclipse Urban</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(220, 81, 82, 1) 20%, rgba(238, 95, 95, 1) 20%, rgba(238, 95, 95, 1) 50%, rgba(238, 95, 95, 1) 79%, rgba(220, 81, 82, 1) 79%)"></div> SWB | Your FiftyFive [Old]</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>108</td>
+        <td>FJ09 FWH</td>
+        <td>Volvo B7RLE Wright Eclipse Urban</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>109</td>
+        <td>PX05 EKJ</td>
+        <td>Dennis Dart SLF Plaxton Pointer 2</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>110</td>
+        <td>LG02 FGJ</td>
+        <td>Dennis Dart SLF Plaxton Pointer 2</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 72%, rgba(8, 77, 126, 1) 72%)"></div> SWB | Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>111</td>
+        <td>EG52 FGU</td>
+        <td>Caetano Nimbus</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>112</td>
+        <td>SN23 HJG</td>
+        <td>Volvo B8RLE MCV Evora</td>
+        <td><div class="livery" style="background:  radial-gradient(circle at 69% 50%, rgba(21, 21, 21, 1) 0%, rgba(21, 21, 21, 1) 60%, rgba(255, 12, 12, 1) 60%, rgba(205, 205, 205, 1) 60%, rgba(255, 12, 12, 1) 66%, rgba(255, 12, 12, 1) 68%, rgba(255, 12, 12, 1))"></div> SWB | The Comet</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>113</td>
+        <td>YX11 AEN</td>
+        <td>ADL Enviro200</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td>JEH</td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>114</td>
+        <td>S200 SWB</td>
+        <td>ADL Enviro200</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>115</td>
+        <td>YJ16 DXT</td>
+        <td>Optare MetroCity</td>
+        <td><div class="livery" style="background: "></div> Flyer</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>116</td>
+        <td>SW24 LFO</td>
+        <td>Volvo B7RLE Wright Eclipse 2</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 70% 50%, rgba(96, 86, 153, 1) 35%, rgba(40, 40, 40, 1) 35%, rgba(40, 40, 40, 1) 35%)"></div> SWB | YourFiftyFour</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>117</td>
+        <td>OP59 ARE</td>
+        <td>Optare Solo</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 72%, rgba(8, 77, 126, 1) 72%)"></div> SWB | Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>118</td>
+        <td>FJ09 MVW</td>
+        <td>Optare Solo</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 70% 50%, rgba(255, 185, 0, 1) 35%, rgba(255, 197, 42, 1) 35%, rgba(255, 197, 42, 1) 35%)"></div> SWB | The Seventies</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>119</td>
+        <td>YN51 VHK</td>
+        <td>Optare Excel 2</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>120</td>
+        <td>YY16 YJN</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td>Halloween!</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>121</td>
+        <td>GX06 DYW</td>
+        <td>ADL/TransBus Enviro300</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>122</td>
+        <td>YD70 CFE</td>
+        <td>Yutong E12</td>
+        <td><div class="livery" style="background: linear-gradient(134deg, rgba(153, 202, 60, 1) 35%, rgba(16, 175, 77, 1) 35%, rgba(16, 175, 77, 1) 37%, rgba(0, 88, 35, 1) 37%, rgba(0, 88, 35, 1) 100%)"></div> SWB | Zero Emission ELECTRIC</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>123</td>
+        <td>SL69 XMT</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(176, 45, 46, 1) 49%, rgba(196, 186, 156, 1) 50%)"></div> SWB | Ashire Traction</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>124</td>
+        <td>P206 NSC</td>
+        <td>Dennis Dart SLF Plaxton Pointer</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>125</td>
+        <td>YX60 DWZ</td>
+        <td>Plaxton Primo</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>126</td>
+        <td>N553 VDC</td>
+        <td>Volvo B10M Alexander PS</td>
+        <td><div class="livery" style="background: #084d7e"></div> SWB | Retro</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>127</td>
+        <td>L648 PWR</td>
+        <td>Volvo B10B Alexander Strider</td>
+        <td><div class="livery" style="background: #527cae"></div> SWB | Original Blue</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>128</td>
+        <td>S100 AIR</td>
+        <td>ADL Enviro200</td>
+        <td><div class="livery" style="background: linear-gradient(108deg, #CDCDCD00 65%, #429e9c 65%),linear-gradient(74deg, #CDCDCD00 49%, #2e7270 49%),linear-gradient(108deg, #cdcdcd 33%, #368786 33%)"></div> SWB | SouthRider</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>129</td>
+        <td>SK15 HFT</td>
+        <td>ADL Enviro300</td>
+        <td><div class="livery" style="background: linear-gradient(108deg, #CDCDCD00 65%, #429e9c 65%),linear-gradient(74deg, #CDCDCD00 49%, #2e7270 49%),linear-gradient(108deg, #cdcdcd 33%, #368786 33%)"></div> SWB | SouthRider</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>130</td>
+        <td>YJ05 DAF</td>
+        <td>DAF SB120 Wright Cadet</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>131</td>
+        <td>SJ23 HRR</td>
+        <td>Volvo B8RLE MCV Evora</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A, Wifi, Announcements</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>132</td>
+        <td>YJ07 VSG</td>
+        <td>Optare Tempo</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>133</td>
+        <td>SW25 ZEB</td>
+        <td>Yutong E15</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A, USB-C</td>
+        <td></td>
+        <td>Yapton</td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>134</td>
+        <td>YX69 NXA</td>
+        <td>ADL Enviro200 MMC</td>
+        <td><div class="livery" style="background:  radial-gradient(circle at 69% 50%, rgba(21, 21, 21, 1) 0%, rgba(21, 21, 21, 1) 60%, rgba(255, 12, 12, 1) 60%, rgba(205, 205, 205, 1) 60%, rgba(255, 12, 12, 1) 66%, rgba(255, 12, 12, 1) 68%, rgba(255, 12, 12, 1))"></div> SWB | The Comet</td>
+        <td></td>
+        <td>USB-A, Announcements</td>
+        <td></td>
+        <td>Yapton</td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>201</td>
+        <td>LX59 CMU</td>
+        <td>Scania N230UD OmniCity</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>202</td>
+        <td>MX07 HMG</td>
+        <td>ADL Enviro400</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(8, 77, 126, 1) 20%, rgba(205, 205, 205, 1) 20%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 79%, rgba(8, 77, 126, 1) 79%)"></div> SWB | Coaster Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>203</td>
+        <td>W673 PTD</td>
+        <td>Dennis Trident East Lancs Lolyne</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>204</td>
+        <td>LG02 KGV</td>
+        <td>Volvo B7TL Wright Eclipse Gemini</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>205</td>
+        <td>AE53 TZK</td>
+        <td>Dennis Trident Plaxton President</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>206</td>
+        <td>MX53 FLR</td>
+        <td>Dennis Trident Plaxton President</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>207</td>
+        <td>MX56 FSA</td>
+        <td>Dennis Trident Alexander ALX400</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td>Cow</td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>208</td>
+        <td>NO74 UAZ</td>
+        <td>Optare MetroDecker</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>209</td>
+        <td>WA60 FHP</td>
+        <td>ADL Enviro400</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>210</td>
+        <td>YN60 CKP</td>
+        <td>ADL Enviro400</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 20% 30%, rgb(205, 205, 205) 55%, rgb(13, 133, 212) 55%, rgb(13, 133, 212) 64%, rgb(8, 77, 126) 64%)"></div> SWB | Ride The Yapton Coaster</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>211</td>
+        <td>LF20 AXG</td>
+        <td>Volvo B8L MCV EvoSeti</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 20% 30%, rgb(205, 205, 205) 55%, rgb(13, 133, 212) 55%, rgb(13, 133, 212) 64%, rgb(8, 77, 126) 64%)"></div> SWB | Flansham Flyer</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>212</td>
+        <td>LF20 AXH</td>
+        <td>Volvo B8L MCV EvoSeti</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>213</td>
+        <td>T409 SMV</td>
+        <td>Dennis Trident East Lancs Lolyne</td>
+        <td><div class="livery" style="background: linear-gradient(65deg, rgba(8, 77, 126, 1) 33%, rgba(205, 205, 205, 1) 34%)"></div> SWB | Yapton Explorer</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>214</td>
+        <td>N708 LTN</td>
+        <td>Volvo Olympian Alexander RL</td>
+        <td><div class="livery" style="background: #084d7e"></div> SWB | Retro</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>215</td>
+        <td>S100 BUS</td>
+        <td>Volvo Olympian Alexander RL</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(176, 45, 46, 1) 49%, rgba(196, 186, 156, 1) 50%)"></div> SWB | Ashire Traction</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>216</td>
+        <td>S200 BUS</td>
+        <td>Volvo Olympian Alexander RL</td>
+        <td><div class="livery" style="background: linear-gradient(rgba(0, 0, 0, 0) 72%, rgb(12, 105, 183) 20%), linear-gradient(300deg, rgb(12, 105, 183) 40%, rgb(255, 255, 255) 40%)"></div> SWB | AOT Coaches</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>217</td>
+        <td>SK68 LUJ</td>
+        <td>ADL Enviro400 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A, Wifi, Announcements</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>218</td>
+        <td>SK68 LUK</td>
+        <td>ADL Enviro400 MMC</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td>Yapton Coaster</td>
+        <td>USB-A, Announcements</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>219</td>
+        <td>LG02 KGV</td>
+        <td>Volvo B7TL Wright Eclipse Gemini</td>
+        <td><div class="livery" style="background: radial-gradient(circle at 79% 120%, #72c2ad 25%, #0000 25%), linear-gradient(#0000 50%, #00816a 50%), linear-gradient(90deg, #feda1c 50%, #0000 50%), radial-gradient(circle at 50% -10%, #feda1c 45%, #00816a 45%)"></div> SWB | South West Explorer</td>
+        <td></td>
+        <td>Wifi</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>220</td>
+        <td>SW25 ADL</td>
+        <td>ADL Enviro400 MMC</td>
+        <td><div class="livery" style="background: #00498a"></div> SWB | New Coaster</td>
+        <td></td>
+        <td>USB-A, USB-C, Wireless Charging, Wifi</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>221</td>
+        <td>MX55 KRL</td>
+        <td>Dennis Trident Alexander ALX400</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Yapton</td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>301</td>
+        <td>R10 LEX</td>
+        <td>Volvo B10M Van Hool T9</td>
+        <td><div class="livery" style="background: linear-gradient(55deg, rgba(109, 109, 109, 1) 64%, rgba(47, 44, 45, 1) 64%)"></div> SWB | Executive Travel</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>302</td>
+        <td>R20 LEX</td>
+        <td>Volvo B10M Van Hool T9</td>
+        <td><div class="livery" style="background: linear-gradient(55deg, rgba(75, 47, 72, 1) 35%, rgba(205, 205, 205, 1) 35%)"></div> SWB | East Midlands Railway</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>303</td>
+        <td>R24 LEX</td>
+        <td>Volvo B10M Van Hool T9</td>
+        <td><div class="livery" style="background: linear-gradient(55deg, rgba(10, 46, 71, 1) 35%, rgba(205, 205, 205, 1) 35%)"></div> SWB | South Western Railway</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>304</td>
+        <td>R30 LEX</td>
+        <td>Setra S315 GT-HD</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(0, 65, 107, 1) 50%, rgba(112, 203, 244, 1) 50%)"></div> SWB | Tui Discover Your Smile</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>305</td>
+        <td>BX16 CMO</td>
+        <td>Volvo B9R Caetano Levante</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>306</td>
+        <td>R40 LEX</td>
+        <td>Setra S315 GT-HD</td>
+        <td><div class="livery" style="background: linear-gradient(rgba(0, 0, 0, 0) 72%, rgb(12, 105, 183) 20%), linear-gradient(300deg, rgb(12, 105, 183) 40%, rgb(255, 255, 255) 40%)"></div> SWB | AOT Coaches</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>307</td>
+        <td>BF68 LBO</td>
+        <td>Volvo B11R Caetano Levante</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(0, 165, 255, 1) 47%, rgba(202, 202, 202, 1) 48%, rgba(202, 202, 202, 1) 50%, rgba(202, 202, 202, 1) 52%, rgba(29, 53, 66, 1) 53%)"></div> SW Coaches</td>
+        <td></td>
+        <td>USB-A</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>308</td>
+        <td>MX06 LUH</td>
+        <td></td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>666</td>
+        <td>MX55 KRU</td>
+        <td>Volvo B7TL Alexander ALX400</td>
+        <td><div class="livery" style="background: linear-gradient(63deg, #B01D1DFF 46%, #1D1D1DFF 55%)"></div> SWB | Halloween 2024</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>16960</td>
+        <td>BJ21 HVV</td>
+        <td>Mercedes-Benz Sprinter</td>
+        <td><div class="livery" style="background: linear-gradient(71deg, rgba(8, 77, 126, 1) 21%, rgba(205, 205, 205, 1) 21%, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 77%, rgba(8, 77, 126, 1) 77%)"></div> SWB Aslant</td>
+        <td>Fleet Support</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>16960</td>
+        <td>BJ21 HVJ</td>
+        <td>Mercedes-Benz Sprinter</td>
+        <td><div class="livery" style="background: #084d7e"></div> SWB | Retro</td>
+        <td>Land Train</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>16960</td>
+        <td>R562 UOT</td>
+        <td>Dennis Dart SLF UVG Urbanstar</td>
+        <td><div class="livery" style="background: linear-gradient(0deg, rgba(41, 99, 187, 1) 16%, rgba(212, 0, 0, 1) 21%, rgba(205, 205, 205, 1) 25%)"></div> SWB | Tesco Free Bus</td>
+        <td>Free Bus</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>16960</td>
+        <td>P503 MOT</td>
+        <td>Dennis Dart SLF UVG Urbanstar</td>
+        <td><div class="livery" style="background: linear-gradient(180deg, rgba(205, 205, 205, 1) 50%, rgba(205, 205, 205, 1) 72%, rgba(8, 77, 126, 1) 72%)"></div> SWB | Classic</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>63662</td>
+        <td>ML74 SWB</td>
+        <td>Wright GB Kite Electroliner</td>
+        <td><div class="livery" style="background: linear-gradient(45deg, rgba(61,120,176,1) 0%, rgba(61,120,176,1) 43%, rgba(204,204,204,1) 62%, rgba(204,204,204,1) 82%, rgba(204,204,204,1) 100%, rgba(204,204,204,1) 100%)"></div> SWB | Raven</td>
+        <td></td>
+        <td>USB-A, Wifi, Announcements, Mirrorless</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+    <tr>
+        <td>69696</td>
+        <td>BK73 AFZ</td>
+        <td>Wright StreetDeck Electroliner</td>
+        <td><div class="livery" style="background: linear-gradient(134deg, rgba(153, 202, 60, 1) 35%, rgba(16, 175, 77, 1) 35%, rgba(16, 175, 77, 1) 37%, rgba(0, 88, 35, 1) 37%, rgba(0, 88, 35, 1) 100%)"></div> SWB | Zero Emission ELECTRIC</td>
+        <td></td>
+        <td>USB-A, Wifi, Announcements, Mirrorless</td>
+        <td></td>
+        <td></td>
+        <td>South West Buses</td>
+    </tr>
+    
+        </tbody>
+    </table>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#fleetTable').DataTable({
+            "pageLength": 40,
+            "lengthChange": false,
+            "responsive": true
+        });
+    });
+</script>
+
+</body>
+</html>
